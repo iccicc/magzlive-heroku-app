@@ -5,7 +5,7 @@ jdk:
   - oraclejdk8
   - openjdk8
 
-script: mvn clean verify -B -P coverage
+script: HEROKU_API_KEY="62f8f93d-e18e-42ef-93a7-5c551bcb2433" mvn clean verify -B -P coverage
 before_install:
   - sudo apt-get install jq
   - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
