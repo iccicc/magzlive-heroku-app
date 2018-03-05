@@ -3,6 +3,7 @@ sudo: false
 language: java
 jdk:
   - oraclejdk8
+  - openjdk8
 
 script: mvn clean verify -B -P coverage
 before_install:
